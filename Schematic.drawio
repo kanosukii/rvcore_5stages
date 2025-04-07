@@ -896,6 +896,9 @@
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
+        <mxCell id="P6e8AEhCtGOh2EU1g-Fo-20" value="write back in order&amp;nbsp;&lt;div&gt;solve data hazards by forwarding and stalling&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="135" y="90" width="565" height="80" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
