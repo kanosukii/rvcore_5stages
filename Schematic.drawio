@@ -899,6 +899,27 @@
         <mxCell id="P6e8AEhCtGOh2EU1g-Fo-20" value="write back in order&amp;nbsp;&lt;div&gt;solve data hazards by forwarding and stalling&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="135" y="90" width="565" height="80" as="geometry" />
         </mxCell>
+        <mxCell id="P6e8AEhCtGOh2EU1g-Fo-21" value="" style="triangle;whiteSpace=wrap;html=1;rotation=-90;" vertex="1" parent="1">
+          <mxGeometry x="660" y="464.75" width="20" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="P6e8AEhCtGOh2EU1g-Fo-22" value="" style="triangle;whiteSpace=wrap;html=1;rotation=-90;" vertex="1" parent="1">
+          <mxGeometry x="1190" y="478" width="20" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="P6e8AEhCtGOh2EU1g-Fo-23" value="" style="endArrow=none;html=1;rounded=0;entryX=0.613;entryY=0.988;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="P6e8AEhCtGOh2EU1g-Fo-24" target="QFMOEgFZAVhb_OsHRTg_-14">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="669" y="510" as="sourcePoint" />
+            <mxPoint x="880" y="540" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="P6e8AEhCtGOh2EU1g-Fo-24" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="665" y="488" width="10" height="10" as="geometry" />
+        </mxCell>
+        <mxCell id="P6e8AEhCtGOh2EU1g-Fo-26" value="" style="endArrow=none;html=1;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" target="P6e8AEhCtGOh2EU1g-Fo-24">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="670" y="530" as="sourcePoint" />
+            <mxPoint x="880" y="540" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
