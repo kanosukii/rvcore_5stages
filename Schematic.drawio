@@ -1,6 +1,6 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36" version="26.2.9">
   <diagram name="Page-1" id="StYZJcCEQKMgn_R7Sx6w">
-    <mxGraphModel dx="1668" dy="1111" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="2068" dy="1111" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -1364,20 +1364,6 @@
         <mxCell id="TAjZ4tMBE7X3chAODU8h-7" value="alu_result" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="TAjZ4tMBE7X3chAODU8h-6">
           <mxGeometry x="-0.44" relative="1" as="geometry">
             <mxPoint x="16" as="offset" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="TAjZ4tMBE7X3chAODU8h-8" value="" style="endArrow=none;html=1;rounded=0;" edge="1" parent="TAjZ4tMBE7X3chAODU8h-1">
-          <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="70" y="40" as="sourcePoint" />
-            <mxPoint x="120" y="-100" as="targetPoint" />
-            <Array as="points">
-              <mxPoint x="120" y="40" />
-            </Array>
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="TAjZ4tMBE7X3chAODU8h-9" value="less&lt;div&gt;zero&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="TAjZ4tMBE7X3chAODU8h-8">
-          <mxGeometry x="0.4105" y="-1" relative="1" as="geometry">
-            <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
         <mxCell id="TAjZ4tMBE7X3chAODU8h-10" value="" style="endArrow=none;html=1;rounded=0;" edge="1" parent="TAjZ4tMBE7X3chAODU8h-1">
