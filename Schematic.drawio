@@ -1427,13 +1427,6 @@
         <mxCell id="TAjZ4tMBE7X3chAODU8h-19" value="mini&lt;div&gt;alu&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
           <mxGeometry x="1389.75" y="283" width="50" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="TAjZ4tMBE7X3chAODU8h-21" value="d 。。" style="edgeStyle=none;orthogonalLoop=1;jettySize=auto;html=1;rounded=0;" edge="1" parent="1">
-          <mxGeometry width="80" relative="1" as="geometry">
-            <mxPoint x="380" y="910" as="sourcePoint" />
-            <mxPoint x="460" y="910" as="targetPoint" />
-            <Array as="points" />
-          </mxGeometry>
-        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
