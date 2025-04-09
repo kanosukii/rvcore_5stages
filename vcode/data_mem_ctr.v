@@ -10,7 +10,7 @@ module data_memory_ctr#(
 //read lb lh lw lbu lhu
 	reg [DATA_WIDTH-1:0]data_out_temp;
 	always @(*)begin
-	data_out_temp = data_in;	
+	data_out_temp = DATA_WITDH'b0;	
 	if(op == 3'b000) data_out_temp = {{24{data_in[7]}},data_in[7:0]};
 	if(op == 3'b001) data_out_temp = {{16{data_in[15]}},data_in[15:0]};
 	if(op == 3'b010) data_out_temp = data_in; 
