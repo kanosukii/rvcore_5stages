@@ -5,7 +5,7 @@
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
         <mxCell id="P6e8AEhCtGOh2EU1g-Fo-20" value="write back in order, so the only data hazards are RAW.&lt;div&gt;solving this by forwarding and stalling&lt;/div&gt;&lt;div&gt;Given no address prediction unit, predict that branch not taken&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="670.25" y="910" width="373.5" height="60" as="geometry" />
+          <mxGeometry x="428.75" y="890" width="373.5" height="60" as="geometry" />
         </mxCell>
         <mxCell id="Wlrv1BH2EtyuIiHUKAzt-6" value="instr&lt;div&gt;mem&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="403.75" y="635.5" width="80" height="140" as="geometry" />
@@ -1412,6 +1412,9 @@
         </mxCell>
         <mxCell id="TAjZ4tMBE7X3chAODU8h-19" value="mini&lt;div&gt;alu&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
           <mxGeometry x="1389.75" y="283" width="50" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="TAjZ4tMBE7X3chAODU8h-29" value="when Branch, it needs two artimetic, rs1 &amp;amp; rs2&amp;nbsp; and pc + imm;&lt;div&gt;So, there are two ways to do it.&amp;nbsp;&lt;/div&gt;&lt;div&gt;One is alu produces pc target, and minialu prodeced rs1 &amp;amp; rs2&lt;/div&gt;&lt;div&gt;the other is alu prodeces rs1 &amp;amp; rs2, minialu produces pctarget&lt;/div&gt;&lt;div&gt;this core use the first way.&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="965" y="900" width="495" height="120" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
