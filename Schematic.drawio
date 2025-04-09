@@ -201,8 +201,8 @@
             <mxPoint x="183.75" y="720" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="TAjZ4tMBE7X3chAODU8h-18" value="pctarget" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="Wlrv1BH2EtyuIiHUKAzt-67">
-          <mxGeometry x="-0.1583" y="-3" relative="1" as="geometry">
+        <mxCell id="TAjZ4tMBE7X3chAODU8h-30" value="alu_result" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="Wlrv1BH2EtyuIiHUKAzt-67">
+          <mxGeometry x="-0.1583" y="-6" relative="1" as="geometry">
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
