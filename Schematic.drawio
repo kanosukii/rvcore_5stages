@@ -1405,7 +1405,7 @@
         <mxCell id="TAjZ4tMBE7X3chAODU8h-29" value="when Branch, it needs two artimetic, rs1 &amp;amp; rs2&amp;nbsp; and pc + imm;&lt;div&gt;So, there are two ways to do it.&amp;nbsp;&lt;/div&gt;&lt;div&gt;One is alu produces pc target, and minialu prodeced rs1 &amp;amp; rs2&lt;/div&gt;&lt;div&gt;the other is alu prodeces rs1 &amp;amp; rs2, minialu produces pctarget&lt;/div&gt;&lt;div&gt;this core use the first way.&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="965" y="900" width="495" height="120" as="geometry" />
         </mxCell>
-        <mxCell id="s5LJnc7lrZw66viF-TXm-1" value="" style="endArrow=none;html=1;rounded=0;" edge="1" parent="1">
+        <mxCell id="s5LJnc7lrZw66viF-TXm-1" value="" style="endArrow=none;html=1;rounded=0;" parent="1" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="683.75" y="396.25" as="sourcePoint" />
             <mxPoint x="780" y="360" as="targetPoint" />
@@ -1414,16 +1414,11 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="s5LJnc7lrZw66viF-TXm-2" value="wb_ctr" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="s5LJnc7lrZw66viF-TXm-1">
+        <mxCell id="s5LJnc7lrZw66viF-TXm-2" value="wb_ctr" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="s5LJnc7lrZw66viF-TXm-1" vertex="1" connectable="0">
           <mxGeometry x="0.0619" y="-1" relative="1" as="geometry">
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <UserObject label="s" link="s" id="s5LJnc7lrZw66viF-TXm-3">
-          <mxCell style="fontColor=#0000EE;fontStyle=4;rounded=1;overflow=hidden;spacing=10;" vertex="1" parent="1">
-            <mxGeometry x="825" y="550" width="50" height="40" as="geometry" />
-          </mxCell>
-        </UserObject>
       </root>
     </mxGraphModel>
   </diagram>
