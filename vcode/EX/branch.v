@@ -10,7 +10,7 @@ module branch#(
 );
 
 	wire carry,zero,overflow;
-	wire [31:0]sum
+	wire [31:0]sum;
 	adder u_branch_adder(
 	.a(rd1),
 	.b(~rd2),

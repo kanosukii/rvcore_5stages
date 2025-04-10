@@ -15,6 +15,10 @@ module decode#(
 	output [2:0]op,
 	output reg_we,
 	output mem_we,
+	output [1:0]wb_ctr, // 2'b00 alu_res 2'b01 pc+4 2'b11 data_mem
+
+	output rs1_need,
+	output rs2_need
 );
 // rs1 rs2 rd
 	assign rs1 = (op_0110111) ? 5'b0 : instr[19:15];
@@ -62,8 +66,8 @@ end
 	assign imm = imm_temp;	
 
 //alu_src_a alu_src_b     when typeB alu prodece target pc
-	assign alu_scr_a = (op_0010111 | typeJ | typeB);
-	assign alu_scr_b = ~(typeR);
+	assign alu_src_a = (op_0010111 | typeJ | typeB);
+	assign alu_src_b = ~(typeR);
 
 //alu_ctr
 	wire func3_101 = (func3 == 3'b101);
@@ -81,4 +85,9 @@ end
 	assign op = func3;
 	assign reg_we = ~(typeB | typeS);
 	assign mem_we = typeS;
+
+//wb_ctr
+	assign wb_ctr = (typeJ | op_1100111) ? 2'b01 : (typeS ? 2'b11 : 2'b00);
+	assign rs1_need = !(typeU || typeJ);
+	assign rs2_need = typeR || typeS || typeB; 
 endmodule
