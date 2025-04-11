@@ -1,0 +1,101 @@
+
+test.o:     file format elf32-littleriscv
+
+
+Disassembly of section .text:
+
+00000000 <_start>:
+   0:	00a00093          	li	ra,10
+   4:	01400113          	li	sp,20
+   8:	01e00193          	li	gp,30
+   c:	ff800213          	li	tp,-8
+  10:	002082b3          	add	t0,ra,sp
+  14:	40218333          	sub	t1,gp,sp
+  18:	001113b3          	sll	t2,sp,ra
+  1c:	0041a433          	slt	s0,gp,tp
+  20:	0041b4b3          	sltu	s1,gp,tp
+  24:	0020c533          	xor	a0,ra,sp
+  28:	0021d5b3          	srl	a1,gp,sp
+  2c:	40125633          	sra	a2,tp,ra
+  30:	0020e6b3          	or	a3,ra,sp
+  34:	0020f733          	and	a4,ra,sp
+  38:	00a08793          	addi	a5,ra,10
+  3c:	fec22813          	slti	a6,tp,-20
+  40:	fec23893          	sltiu	a7,tp,-20
+  44:	00f0c913          	xori	s2,ra,15
+  48:	00f0e993          	ori	s3,ra,15
+  4c:	00317a13          	andi	s4,sp,3
+  50:	00119a93          	slli	s5,gp,0x1
+  54:	00525b13          	srli	s6,tp,0x5
+  58:	40525b93          	srai	s7,tp,0x5
+  5c:	00017c37          	lui	s8,0x17
+  60:	00000c97          	auipc	s9,0x0
+  64:	014c8c93          	addi	s9,s9,20 # 74 <temp>
+  68:	004c8d67          	jalr	s10,4(s9)
+  6c:	00000013          	nop
+  70:	00000013          	nop
+
+00000074 <temp>:
+  74:	00000013          	nop
+  78:	87654d37          	lui	s10,0x87654
+  7c:	321d0d13          	addi	s10,s10,801 # 87654321 <label_end+0x87654221>
+  80:	01a02023          	sw	s10,0(zero) # 0 <_start>
+  84:	00000d83          	lb	s11,0(zero) # 0 <_start>
+  88:	00004d83          	lbu	s11,0(zero) # 0 <_start>
+  8c:	01a01223          	sh	s10,4(zero) # 4 <_start+0x4>
+  90:	00401d83          	lh	s11,4(zero) # 4 <_start+0x4>
+  94:	00405d83          	lhu	s11,4(zero) # 4 <_start+0x4>
+  98:	01a00423          	sb	s10,8(zero) # 8 <_start+0x8>
+  9c:	00802d83          	lw	s11,8(zero) # 8 <_start+0x8>
+
+000000a0 <blabel1>:
+  a0:	04208463          	beq	ra,sp,e8 <label1>
+  a4:	00000013          	nop
+  a8:	00000d93          	li	s11,0
+
+000000ac <blabel2>:
+  ac:	04209063          	bne	ra,sp,ec <label2>
+  b0:	00000013          	nop
+  b4:	00100d93          	li	s11,1
+
+000000b8 <blabel3>:
+  b8:	0211cc63          	blt	gp,ra,f0 <label3>
+  bc:	00000013          	nop
+  c0:	00200d93          	li	s11,2
+
+000000c4 <blabel4>:
+  c4:	0220d863          	bge	ra,sp,f4 <label4>
+  c8:	00000013          	nop
+  cc:	00300d93          	li	s11,3
+
+000000d0 <blabel5>:
+  d0:	0240e463          	bltu	ra,tp,f8 <label5>
+  d4:	00000013          	nop
+  d8:	00400d93          	li	s11,4
+
+000000dc <blabel6>:
+  dc:	0240f063          	bgeu	ra,tp,fc <label6>
+  e0:	00000013          	nop
+  e4:	00500d93          	li	s11,5
+
+000000e8 <label1>:
+  e8:	fc5ff06f          	j	ac <blabel2>
+
+000000ec <label2>:
+  ec:	fcdff06f          	j	b8 <blabel3>
+
+000000f0 <label3>:
+  f0:	fd5ff06f          	j	c4 <blabel4>
+
+000000f4 <label4>:
+  f4:	fddff06f          	j	d0 <blabel5>
+
+000000f8 <label5>:
+  f8:	fe5ff06f          	j	dc <blabel6>
+
+000000fc <label6>:
+  fc:	0040006f          	j	100 <label_end>
+
+00000100 <label_end>:
+ 100:	00000013          	nop
+ 104:	ffdff06f          	j	100 <label_end>

@@ -27,17 +27,29 @@ module top#(
 );
 
 	instr_mem u_instr_mem(
-	.addr(pc),
+	.addr(pc[17:2]),
 	.data(instr)
 );
 
 	data_mem u_data_mem(
 	.clk(clk),
-	.addr(alu_resultm),
+	.addr(alu_resultm[14:0]),
 	.data_in(rd2_turem),
 	.wmask(wmask),
 	.we(mem_wem),
 	.data_out(data)
 );
 
+	initial begin
+	$readmemh("./tcode/temp/test.hex",u_instr_mem);
+end
+	
+	initial begin
+	if($testSplusargs("trace") != 0)begin
+		$display("[%0t] Tracing to logs/vlt_dump.vcd...\n", $time);
+		$dumpfile("logs/vlt_dump.vcd");
+		$dumpvars();
+	end
+	$display("[%0t] Model running...\n", $time);
+	end
 endmodule
