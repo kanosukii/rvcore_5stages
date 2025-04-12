@@ -17,8 +17,10 @@ VERILATOR_FLAGS += -Wall
 VERILATOR_FLAGS += --trace
 # Generate coverage analysis
 VERILATOR_FLAGS += --coverage
-# Ban warn about unusedsignal
-#VERILATOR_FLAGS += --Wno-UNUSEDSIGNAL
+# Ban warn about unused signal
+VERILATOR_FLAGS += --Wno-UNUSEDSIGNAL
+#Ban warn about pin connect empty
+VERILATOR_FLAGS += --Wno-PINCONNECTEMPTY
 #Input verilog file
 VSRCS = $(shell find $(abspath ./vcode) -name "*.v")
 VERILATOR_INPUT = $(VSRCS) sim_main.cpp

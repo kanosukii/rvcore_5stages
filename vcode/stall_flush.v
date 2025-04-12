@@ -10,8 +10,7 @@ module stall_flush(
 	output if_en,
 	output de_en,
 	output ex_rst,
-	output de_rst,
-
+	output de_rst
 );
 	wire stall,flush;
 //1'b0 rs1 rs2

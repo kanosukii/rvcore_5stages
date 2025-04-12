@@ -41,7 +41,7 @@ int main(int argc, char** argv){
 	
 	top->clk = !top->clk;//Toggle a fast (time/2 period) clock
 
-	if(contextp->time() > 1){
+	if(contextp->time() > 3){
 	top->rst = 0x0;
 	};
 	

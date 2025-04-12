@@ -1,0 +1,200 @@
+./MEM/mem.v:2:	parameter DATA_WITDH = 32,
+./MEM/mem.v:3:	parameter ADDR_WITDH = 32
+./MEM/mem.v:12:	input [ADDR_WITDH-1:0]pcne,
+./MEM/mem.v:13: 	input [DATA_WITDH-1:0]alu_result,
+./MEM/mem.v:14:	input [DATA_WITDH-1:0]rd2_ture,
+./MEM/mem.v:16:	input [DATA_WITDH-1:0]data_in,
+./MEM/mem.v:20:	output [ADDR_WITDH-1:0]pcnm,
+./MEM/mem.v:21: 	output [DATA_WITDH-1:0]alu_resultm,
+./MEM/mem.v:26:	output [DATA_WITDH-1:0]rd2_turem,
+./MEM/mem.v:27:	output [DATA_WITDH-1:0]data_out
+./MEM/mem_dff.v:2:	parameter DATA_WITDH = 32,
+./MEM/mem_dff.v:3:	parameter ADDR_WITDH = 32
+./MEM/mem_dff.v:12:	input [ADDR_WITDH-1:0]pcne,//42
+./MEM/mem_dff.v:13: 	input [DATA_WITDH-1:0]alu_result,//74
+./MEM/mem_dff.v:14:	input [DATA_WITDH-1:0]rd2_ture,//106
+./MEM/mem_dff.v:21:	output [ADDR_WITDH-1:0]pcnm,
+./MEM/mem_dff.v:22: 	output [DATA_WITDH-1:0]alu_resultm,
+./MEM/mem_dff.v:23:	output [DATA_WITDH-1:0]rd2_turem,
+./EX/ex.v:2:	parameter DATA_WITDH = 32,
+./EX/ex.v:3:	parameter ADDR_WITDH =32
+./EX/ex.v:9:	input [DATA_WITDH-1:0]imm,
+./EX/ex.v:18:	input [ADDR_WITDH-1:0]pcnd,
+./EX/ex.v:19:	input [ADDR_WITDH-1:0]pcd,
+./EX/ex.v:20:	input [DATA_WITDH-1:0]rd1,
+./EX/ex.v:21:	input [DATA_WITDH-1:0]rd2,
+./EX/ex.v:36:	output [ADDR_WITDH-1:0]pcne,
+./EX/ex.v:38: 	output [DATA_WITDH-1:0]alu_result,
+./EX/ex.v:39:	output [DATA_WITDH-1:0]rd2_ture,
+./EX/ex.v:45:	wire [DATA_WITDH-1:0]imme,pce,rd1e,rd2e;
+./EX/ex.v:89:	wire [DATA_WITDH-1:0]rd1_ture,rd2_ture,alu_src_1,alu_src_2;
+./EX/ex_dff.v:2:	parameter DATA_WITDH = 32,
+./EX/ex_dff.v:8:	input [DATA_WITDH-1:0]imm,//33
+./EX/ex_dff.v:17:	input [ADDR_WITDH-1:0]pcnd,//85
+./EX/ex_dff.v:18:	input [ADDR_WITDH-1:0]pcd,//117
+./EX/ex_dff.v:19:	input [DATA_WITDH-1:0]rd1,//149
+./EX/ex_dff.v:20:	input [DATA_WITDH-1:0]rd2,//181
+./EX/ex_dff.v:26:	output [DATA_WITDH-1:0]imme,
+./EX/ex_dff.v:35:	output [ADDR_WITDH-1:0]pcne,
+./EX/ex_dff.v:36:	output [ADDR_WITDH-1:0]pce,
+./EX/ex_dff.v:37:	output [DATA_WITDH-1:0]rd1e,
+./EX/ex_dff.v:38:	output [DATA_WITDH-1:0]rd2e,
+./EX/branch.v:2:	parameter DATA_WITDH = 32
+./EX/branch.v:7:	input [DATA_WITDH-1:0]rd1,
+./EX/branch.v:8:	input [DATA_WITDH-1:0]rd2,
+./error:1:./MEM/mem.v:2:	parameter DATA_WITDH = 32,
+./error:2:./MEM/mem.v:3:	parameter ADDR_WITDH = 32
+./error:3:./MEM/mem.v:12:	input [ADDR_WITDH-1:0]pcne,
+./error:4:./MEM/mem.v:13: 	input [DATA_WITDH-1:0]alu_result,
+./error:5:./MEM/mem.v:14:	input [DATA_WITDH-1:0]rd2_ture,
+./error:6:./MEM/mem.v:16:	input [DATA_WITDH-1:0]data_in,
+./error:7:./MEM/mem.v:20:	output [ADDR_WITDH-1:0]pcnm,
+./error:8:./MEM/mem.v:21: 	output [DATA_WITDH-1:0]alu_resultm,
+./error:9:./MEM/mem.v:26:	output [DATA_WITDH-1:0]rd2_turem,
+./error:10:./MEM/mem.v:27:	output [DATA_WITDH-1:0]data_out
+./error:11:./MEM/mem_dff.v:2:	parameter DATA_WITDH = 32,
+./error:12:./MEM/mem_dff.v:3:	parameter ADDR_WITDH = 32
+./error:13:./MEM/mem_dff.v:12:	input [ADDR_WITDH-1:0]pcne,//42
+./error:14:./MEM/mem_dff.v:13: 	input [DATA_WITDH-1:0]alu_result,//74
+./error:15:./MEM/mem_dff.v:14:	input [DATA_WITDH-1:0]rd2_ture,//106
+./error:16:./MEM/mem_dff.v:21:	output [ADDR_WITDH-1:0]pcnm,
+./error:17:./MEM/mem_dff.v:22: 	output [DATA_WITDH-1:0]alu_resultm,
+./error:18:./MEM/mem_dff.v:23:	output [DATA_WITDH-1:0]rd2_turem,
+./error:19:./EX/ex.v:2:	parameter DATA_WITDH = 32,
+./error:20:./EX/ex.v:3:	parameter ADDR_WITDH =32
+./error:21:./EX/ex.v:9:	input [DATA_WITDH-1:0]imm,
+./error:22:./EX/ex.v:18:	input [ADDR_WITDH-1:0]pcnd,
+./error:23:./EX/ex.v:19:	input [ADDR_WITDH-1:0]pcd,
+./error:24:./EX/ex.v:20:	input [DATA_WITDH-1:0]rd1,
+./error:25:./EX/ex.v:21:	input [DATA_WITDH-1:0]rd2,
+./error:26:./EX/ex.v:36:	output [ADDR_WITDH-1:0]pcne,
+./error:27:./EX/ex.v:38: 	output [DATA_WITDH-1:0]alu_result,
+./error:28:./EX/ex.v:39:	output [DATA_WITDH-1:0]rd2_ture,
+./error:29:./EX/ex.v:45:	wire [DATA_WITDH-1:0]imme,pce,rd1e,rd2e;
+./error:30:./EX/ex.v:89:	wire [DATA_WITDH-1:0]rd1_ture,rd2_ture,alu_src_1,alu_src_2;
+./error:31:./EX/ex_dff.v:2:	parameter DATA_WITDH = 32,
+./error:32:./EX/ex_dff.v:8:	input [DATA_WITDH-1:0]imm,//33
+./error:33:./EX/ex_dff.v:17:	input [ADDR_WITDH-1:0]pcnd,//85
+./error:34:./EX/ex_dff.v:18:	input [ADDR_WITDH-1:0]pcd,//117
+./error:35:./EX/ex_dff.v:19:	input [DATA_WITDH-1:0]rd1,//149
+./error:36:./EX/ex_dff.v:20:	input [DATA_WITDH-1:0]rd2,//181
+./error:37:./EX/ex_dff.v:26:	output [DATA_WITDH-1:0]imme,
+./error:38:./EX/ex_dff.v:35:	output [ADDR_WITDH-1:0]pcne,
+./error:39:./EX/ex_dff.v:36:	output [ADDR_WITDH-1:0]pce,
+./error:40:./EX/ex_dff.v:37:	output [DATA_WITDH-1:0]rd1e,
+./error:41:./EX/ex_dff.v:38:	output [DATA_WITDH-1:0]rd2e,
+./error:42:./EX/branch.v:2:	parameter DATA_WITDH = 32
+./error:43:./EX/branch.v:7:	input [DATA_WITDH-1:0]rd1,
+./error:44:./EX/branch.v:8:	input [DATA_WITDH-1:0]rd2,
+./error:45:./top.v:2:	parameter ADDR_WITDH = 32,
+./error:46:./top.v:3:	parameter DATA_WITDH = 32
+./error:47:./top.v:8:	wire [ADDR_WITDH-1:0]instr;
+./error:48:./top.v:9:	wire [DATA_WITDH-1:0]data;
+./error:49:./top.v:10:	wire [DATA_WITDH-1:0]alu_resultm;
+./error:50:./top.v:11:	wire [DATA_WITDH-1:0]rd2_turem;
+./error:51:./top.v:14:	wire [ADDR_WITDH-1:0]pc;
+./error:52:./data_mem_ctr.v:13:	data_out_temp = {DATA_WITDH{1'b0}};	
+./error:53:./DE/register.v:2:	parameter DATA_WITDH = 32
+./error:54:./DE/register.v:9:	input [DATA_WITDH-1:0]wd,
+./error:55:./DE/register.v:10:	output [DATA_WITDH-1:0]rd1,
+./error:56:./DE/register.v:11:	output [DATA_WITDH-1:0]rd2
+./error:57:./DE/register.v:13:	reg [DATA_WITDH-1:0]mem[1:31];
+./error:58:./DE/de.v:2:	parameter DATA_WITDH = 32,
+./error:59:./DE/de.v:3:	parameter ADDR_WITDH =32
+./error:60:./DE/de.v:9:	input [ADDR_WITDH-1:0]instr,
+./error:61:./DE/de.v:10:	input [ADDR_WITDH-1:0]pc,
+./error:62:./DE/de.v:11:	input [ADDR_WITDH-1:0]pcn,
+./error:63:./DE/de.v:14:	input [DATA_WITDH-1:0]wdw,
+./error:64:./DE/de.v:30:	output [DATA_WITDH-1:0]rd1,
+./error:65:./DE/de.v:31:	output [DATA_WITDH-1:0]rd2,
+./error:66:./WB/wb.v:2:	parameter DATA_WITDH = 32,
+./error:67:./WB/wb.v:3:	parameter ADDR_WITDH = 32
+./error:68:./WB/wb.v:11:	input [ADDR_WITDH-1:0]pcnm,
+./error:69:./WB/wb.v:12: 	input [DATA_WITDH-1:0]alu_resultm,
+./error:70:./WB/wb.v:14:	input [DATA_WITDH-1:0]data_out,
+./error:71:./WB/wb.v:18:	output [DATA_WITDH-1:0]result
+./error:72:./WB/wb.v:21:	wire [ADDR_WITDH-1:0]pcnw;
+./error:73:./WB/wb.v:22:	wire [DATA_WITDH-1:0]data_outw;
+./error:74:./WB/wb.v:23:	wire [DATA_WITDH-1:0]alu_resultw;
+./error:75:./WB/wb_dff.v:2:	parameter DATA_WITDH = 32,
+./error:76:./WB/wb_dff.v:3:	parameter ADDR_WITDH = 32
+./error:77:./WB/wb_dff.v:11:	input [ADDR_WITDH-1:0]pcnm,//38
+./error:78:./WB/wb_dff.v:12: 	input [DATA_WITDH-1:0]alu_resultm,//70
+./error:79:./WB/wb_dff.v:14:	input [DATA_WITDH-1:0]data_out//104
+./error:80:./WB/wb_dff.v:18:	output [ADDR_WITDH-1:0]pcnw,
+./error:81:./WB/wb_dff.v:19: 	output [DATA_WITDH-1:0]alu_resultw,
+./error:82:./WB/wb_dff.v:21:	output [DATA_WITDH-1:0]data_outw
+./error:83:./cpu.v:2:	parameter ADDR_WITDH = 32,
+./error:84:./cpu.v:3:	parameter DATA_WITDH = 32
+./error:85:./cpu.v:7:	input [ADDR_WITDH-1:0]instr,
+./error:86:./cpu.v:8:	input [DATA_WITDH-1:0]data,
+./error:87:./cpu.v:10:	output [DATA_WITDH-1:0]alu_resultm,
+./error:88:./cpu.v:11:	output [DATA_WITDH-1:0]rd2_turem,
+./error:89:./cpu.v:14:	output [ADDR_WITDH-1:0]pc
+./error:90:./cpu.v:19:	wire [DATA_WITDH-1:0]alu_result,
+./error:91:./cpu.v:21:	wire [ADDR_WITDH-1:0]pcn,
+./error:92:./cpu.v:39:	wire [DATA_WITDH-1:0]imm,rd1,rd2;
+./error:93:./cpu.v:40:	wire [ADDR_WITDH-1:0]pc,pcn,pcd,pcnd;
+./error:94:./cpu.v:45:	wire [DATA_WITDH-1:0]result;
+./error:95:./cpu.v:82:	wire [DATA_WITDH-1:0]rd2_ture;
+./error:96:./cpu.v:83:	wire [ADDR_WITDH-1:0]pcne;
+./error:97:./cpu.v:130:	//[DATA_WITDH-1:0][3:0]wmask
+./error:98:./cpu.v:135:	wire [DATA_WITDH-1:0]data_out;
+./error:99:./cpu.v:136:	wire [ADDR_WITDH-1:0]pcnm;
+./error:100:./cpu.v:176:	.[DATA_WITDH-1:0]result(result)
+./top.v:2:	parameter ADDR_WITDH = 32,
+./top.v:3:	parameter DATA_WITDH = 32
+./top.v:8:	wire [ADDR_WITDH-1:0]instr;
+./top.v:9:	wire [DATA_WITDH-1:0]data;
+./top.v:10:	wire [DATA_WITDH-1:0]alu_resultm;
+./top.v:11:	wire [DATA_WITDH-1:0]rd2_turem;
+./top.v:14:	wire [ADDR_WITDH-1:0]pc;
+./data_mem_ctr.v:13:	data_out_temp = {DATA_WITDH{1'b0}};	
+./DE/register.v:2:	parameter DATA_WITDH = 32
+./DE/register.v:9:	input [DATA_WITDH-1:0]wd,
+./DE/register.v:10:	output [DATA_WITDH-1:0]rd1,
+./DE/register.v:11:	output [DATA_WITDH-1:0]rd2
+./DE/register.v:13:	reg [DATA_WITDH-1:0]mem[1:31];
+./DE/de.v:2:	parameter DATA_WITDH = 32,
+./DE/de.v:3:	parameter ADDR_WITDH =32
+./DE/de.v:9:	input [ADDR_WITDH-1:0]instr,
+./DE/de.v:10:	input [ADDR_WITDH-1:0]pc,
+./DE/de.v:11:	input [ADDR_WITDH-1:0]pcn,
+./DE/de.v:14:	input [DATA_WITDH-1:0]wdw,
+./DE/de.v:30:	output [DATA_WITDH-1:0]rd1,
+./DE/de.v:31:	output [DATA_WITDH-1:0]rd2,
+./WB/wb.v:2:	parameter DATA_WITDH = 32,
+./WB/wb.v:3:	parameter ADDR_WITDH = 32
+./WB/wb.v:11:	input [ADDR_WITDH-1:0]pcnm,
+./WB/wb.v:12: 	input [DATA_WITDH-1:0]alu_resultm,
+./WB/wb.v:14:	input [DATA_WITDH-1:0]data_out,
+./WB/wb.v:18:	output [DATA_WITDH-1:0]result
+./WB/wb.v:21:	wire [ADDR_WITDH-1:0]pcnw;
+./WB/wb.v:22:	wire [DATA_WITDH-1:0]data_outw;
+./WB/wb.v:23:	wire [DATA_WITDH-1:0]alu_resultw;
+./WB/wb_dff.v:2:	parameter DATA_WITDH = 32,
+./WB/wb_dff.v:3:	parameter ADDR_WITDH = 32
+./WB/wb_dff.v:11:	input [ADDR_WITDH-1:0]pcnm,//38
+./WB/wb_dff.v:12: 	input [DATA_WITDH-1:0]alu_resultm,//70
+./WB/wb_dff.v:14:	input [DATA_WITDH-1:0]data_out//104
+./WB/wb_dff.v:18:	output [ADDR_WITDH-1:0]pcnw,
+./WB/wb_dff.v:19: 	output [DATA_WITDH-1:0]alu_resultw,
+./WB/wb_dff.v:21:	output [DATA_WITDH-1:0]data_outw
+./cpu.v:2:	parameter ADDR_WITDH = 32,
+./cpu.v:3:	parameter DATA_WITDH = 32
+./cpu.v:7:	input [ADDR_WITDH-1:0]instr,
+./cpu.v:8:	input [DATA_WITDH-1:0]data,
+./cpu.v:10:	output [DATA_WITDH-1:0]alu_resultm,
+./cpu.v:11:	output [DATA_WITDH-1:0]rd2_turem,
+./cpu.v:14:	output [ADDR_WITDH-1:0]pc
+./cpu.v:19:	wire [DATA_WITDH-1:0]alu_result,
+./cpu.v:21:	wire [ADDR_WITDH-1:0]pcn,
+./cpu.v:39:	wire [DATA_WITDH-1:0]imm,rd1,rd2;
+./cpu.v:40:	wire [ADDR_WITDH-1:0]pc,pcn,pcd,pcnd;
+./cpu.v:45:	wire [DATA_WITDH-1:0]result;
+./cpu.v:82:	wire [DATA_WITDH-1:0]rd2_ture;
+./cpu.v:83:	wire [ADDR_WITDH-1:0]pcne;
+./cpu.v:130:	//[DATA_WITDH-1:0][3:0]wmask
+./cpu.v:135:	wire [DATA_WITDH-1:0]data_out;
+./cpu.v:136:	wire [ADDR_WITDH-1:0]pcnm;
+./cpu.v:176:	.[DATA_WITDH-1:0]result(result)

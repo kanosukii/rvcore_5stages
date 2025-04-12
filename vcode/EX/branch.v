@@ -20,6 +20,7 @@ module branch#(
 	.zero(zero),
 	.overflow(overflow)
 );
+	wire less_sign,less_unsign;
 	assign less_sign = overflow^sum[31];
 	assign less_unsign = carry;
 

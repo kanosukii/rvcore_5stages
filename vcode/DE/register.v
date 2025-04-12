@@ -1,16 +1,16 @@
 module register#(
-	parameter DATA_WITDH = 32
+	parameter DATA_WIDTH = 32
 )(
 	input clk,
 	input [4:0]rs1,
 	input [4:0]rs2,
 	input [4:0]rd,
 	input we,
-	input [DATA_WITDH-1:0]wd,
-	output [DATA_WITDH-1:0]rd1,
-	output [DATA_WITDH-1:0]rd2
+	input [DATA_WIDTH-1:0]wd,
+	output [DATA_WIDTH-1:0]rd1,
+	output [DATA_WIDTH-1:0]rd2
 );
-	reg [DATA_WITDH-1:0]mem[1:31];
+	reg [DATA_WIDTH-1:0]mem[1:31];
 	assign rd1 = (rs1 == 5'b0) ? 32'b0 : mem[rs1];
  	assign rd2 = (rs2 == 5'b0) ? 32'b0 : mem[rs2];
 	

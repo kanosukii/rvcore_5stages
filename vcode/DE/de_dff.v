@@ -13,13 +13,14 @@ module de_dff#(
 	reg [DATA_WIDTH-1:0]pcn_temp,pc_temp;
 	always @(posedge clk) begin
 	if(rst) begin
-		pcn_temp = DATA_WIDTH'b0;
-		pc_temp = DATA_WIDTH'b0; 
-	end
+		pcn_temp <= {DATA_WIDTH{1'b0}};
+		pc_temp <= {DATA_WIDTH{1'b0}}; 
+		end
 	else begin
 		if(en) begin
-			pcn_temp = pcn;
-			pc_temp = pc;
+			pcn_temp <= pcn;
+			pc_temp <= pc;
+		end
 	end
 end
 	assign pcnd = pcn_temp;

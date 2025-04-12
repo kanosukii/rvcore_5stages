@@ -11,7 +11,7 @@ module decode#(
 	output alu_src_a,// 1'b0 rs1 1'b1 pc
 	output alu_src_b,// 1'b0 rs2 1'b1 imm 
 	output [3:0]alu_ctr,
-	output jalx
+	output jalx,
 	output [2:0]op,
 	output reg_we,
 	output mem_we,
@@ -27,12 +27,10 @@ module decode#(
 	
 	wire [6:0]opcode;
 	wire [2:0]func3; 
-	wire [6:0]func7;
 	wire [DATA_WIDTH-1:0]immI,immU,immS,immB,immJ;
 
 	assign opcode = instr[6:0];
-	assign func3 = isntr[14:12];
-	assign func7 = instr[31:25];
+	assign func3 = instr[14:12];
 	
 	assign immI = {{20{instr[31]}},instr[31:20]};
 	assign immU = {instr[31:12],12'b0};
@@ -56,7 +54,7 @@ module decode#(
 	assign branch = {typeB,func3};
 	reg [DATA_WIDTH-1:0]imm_temp;
 	always @(*)begin
-	imm_temp = DATA_WIDTH'b0;
+	imm_temp = {DATA_WIDTH{1'b0}};
 	if(typeB) imm_temp = immB;
 	if(typeU) imm_temp = immU;
 	if(typeJ) imm_temp = immJ;

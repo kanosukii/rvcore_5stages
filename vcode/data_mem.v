@@ -12,7 +12,7 @@ module data_mem#(
 );
 	reg [DATA_WIDTH-1:0]mem[0:(1 << ADDR_WIDTH)-1];
 //read
-	data_out = mem[addr];	
+	assign data_out = mem[addr];	
 //write wmask
 	always @(posedge clk) begin
 	if(we)begin

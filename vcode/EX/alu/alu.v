@@ -22,7 +22,7 @@ module alu(
 	.andi(andi)
 );
 //adder unit
-	wire cin = (sub & slt & sltu);// cin will be 1'b1 if it needs sub op
+	wire cin = (sub | slt | sltu);// cin will be 1'b1 if it needs sub op
 	wire [31:0]sum;
 	wire carry,overflow,adder_zero;
 	adder u_adder(
@@ -34,6 +34,7 @@ module alu(
 	.zero(adder_zero),
 	.overflow(overflow)
 );
+	wire less_sign,less_unsign;
 	assign less_sign = overflow ^ sum[31];
 	assign less_unsign = carry;
 //shift unit
@@ -52,7 +53,7 @@ module alu(
 	result_temp = 32'b0; 
 	if(add | sub) 			result_temp = sum;
 	if(sll | srl | sra) result_temp = shift;
-	if(slt | sltu) 			result_temp = {31{1'b0}, less};
+	if(slt | sltu) 			result_temp = {{31{1'b0}}, less};
 	if(xori)					  result_temp = a ^ b;
 	if(ori) 						result_temp = a | b;
 	if(andi)				  	result_temp = a & b;

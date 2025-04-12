@@ -1,24 +1,24 @@
 module cpu#(
-	parameter ADDR_WITDH = 32,
-	parameter DATA_WITDH = 32
+	parameter ADDR_WIDTH = 32,
+	parameter DATA_WIDTH = 32
 )(
 	input clk,
 	input rst,
-	input [ADDR_WITDH-1:0]instr,
-	input [DATA_WITDH-1:0]data,
+	input [ADDR_WIDTH-1:0]instr,
+	input [DATA_WIDTH-1:0]data,
 
-	output [DATA_WITDH-1:0]alu_resultm,
-	output [DATA_WITDH-1:0]rd2_turem,
+	output [DATA_WIDTH-1:0]alu_resultm,
+	output [DATA_WIDTH-1:0]rd2_turem,
 	output [3:0]wmask,
 	output mem_wem,
-	output [ADDR_WITDH-1:0]pc
+	output [ADDR_WIDTH-1:0]pc
 	
 
 );
-	wire if_en,taken,
-	wire [DATA_WITDH-1:0]alu_result,
+	wire if_en,taken;
+	wire [DATA_WIDTH-1:0]alu_result;
 
-	wire [ADDR_WITDH-1:0]pcn,
+	wire [ADDR_WIDTH-1:0]pcn;
 
 	pc u_pc(
 	.clk(clk),
@@ -36,13 +36,13 @@ module cpu#(
 	wire [2:0]op;
 	wire [3:0]branch,alu_ctr;
 	wire [4:0]rs1,rs2,rd;
-	wire [DATA_WITDH-1:0]imm,rd1,rd2;
-	wire [ADDR_WITDH-1:0]pc,pcn,pcd,pcnd;
+	wire [DATA_WIDTH-1:0]imm,rd1,rd2;
+	wire [ADDR_WIDTH-1:0]pcd,pcnd;
 
 	wire reg_wew;//
 	wire de_rst;
 	wire [4:0]rdw;
-	wire [DATA_WITDH-1:0]result;
+	wire [DATA_WIDTH-1:0]result;
 	de u_de(
 	.clk(clk),
 	.rst(rst | de_rst),
@@ -79,14 +79,14 @@ module cpu#(
 	wire [1:0]wb_ctre;
 	wire [2:0]ope;
 	wire [4:0]rde,rs1e,rs2e;
-	wire [DATA_WITDH-1:0]rd2_ture;
-	wire [ADDR_WITDH-1:0]pcne;
+	wire [DATA_WIDTH-1:0]rd2_ture;
+	wire [ADDR_WIDTH-1:0]pcne;
 
-	wire [DATA_WIDTH-1:0]result,
-	wire [1:0]rd1_ctr,
-	wire [1:0]rd2_ctr,
+	wire [DATA_WIDTH-1:0]result;
+	wire [1:0]rd1_ctr;
+	wire [1:0]rd2_ctr;
 
-	wire ex_rst,
+	wire ex_rst;
 	ex u_ex(
 	 .clk(clk), 
 	 .rst(rst | ex_rst), 
@@ -127,13 +127,13 @@ module cpu#(
 	 .rs2e(rs2e)
 );
 
-	//[DATA_WITDH-1:0][3:0]wmask
+	//[DATA_WIDTH-1:0][3:0]wmask
 
 	wire reg_wem; 
 	wire [1:0]wb_ctrm;
 	wire [4:0]rdm;
-	wire [DATA_WITDH-1:0]data_out;
-	wire [ADDR_WITDH-1:0]pcnm;
+	wire [DATA_WIDTH-1:0]data_out;
+	wire [ADDR_WIDTH-1:0]pcnm;
 
 	mem u_mem(
 	.clk(clk),
@@ -146,7 +146,7 @@ module cpu#(
  	.alu_result(alu_result),
 	.rd2_ture(rd2_ture),
 	.wb_ctre(wb_ctre),
-	.data_in(data_in),
+	.data_in(data),
 
 	.reg_wem(reg_wem),
 	.rdm(rdm),
@@ -172,8 +172,8 @@ module cpu#(
 	.data_out(data_out),
 
 	.reg_wew(reg_wew),
-	.[4:0]rdw(rdw),
-	.[DATA_WITDH-1:0]result(result)
+	.rdw(rdw),
+	.result(result)
 );
 
 	forward u_forward(
@@ -182,7 +182,7 @@ module cpu#(
 	.rdw(rdw),
 	.reg_wew(reg_wew),
 	.rs1e(rs1e),
-	.rs2e(re2e),
+	.rs2e(rs2e),
 	
 	.rd1_ctr(rd1_ctr),
 	.rd2_ctr(rd2_ctr)

@@ -1,17 +1,17 @@
 module top#(
-	parameter ADDR_WITDH = 32,
-	parameter DATA_WITDH = 32
+	parameter ADDR_WIDTH = 32,
+	parameter DATA_WIDTH = 32
 )(
 	input clk,
 	input rst
 );
-	wire [ADDR_WITDH-1:0]instr,
-	wire [DATA_WITDH-1:0]data,
-	wire [DATA_WITDH-1:0]alu_resultm,
-	wire [DATA_WITDH-1:0]rd2_turem,
-	wire [3:0]wmask,
-	wire mem_wem,
-	wire [ADDR_WITDH-1:0]pc,
+	wire [ADDR_WIDTH-1:0]instr;
+	wire [DATA_WIDTH-1:0]data;
+	wire [DATA_WIDTH-1:0]alu_resultm;
+	wire [DATA_WIDTH-1:0]rd2_turem;
+	wire [3:0]wmask;
+	wire mem_wem;
+	wire [ADDR_WIDTH-1:0]pc;
 
 	cpu u_cpu(
 	.clk(clk),
@@ -41,11 +41,13 @@ module top#(
 );
 
 	initial begin
-	$readmemh("./tcode/temp/test.hex",u_instr_mem);
+	$readmemh("./tcode/temp/test.hex",u_instr_mem.mem,0);
+	
+	$display("mem[0] = %h", u_instr_mem.mem[0]);
 end
 	
 	initial begin
-	if($testSplusargs("trace") != 0)begin
+	if($test$plusargs("trace") != 0)begin
 		$display("[%0t] Tracing to logs/vlt_dump.vcd...\n", $time);
 		$dumpfile("logs/vlt_dump.vcd");
 		$dumpvars();

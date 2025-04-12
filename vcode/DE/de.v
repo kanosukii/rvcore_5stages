@@ -1,17 +1,17 @@
 module de#(
-	parameter DATA_WITDH = 32,
-	parameter ADDR_WITDH =32
+	parameter DATA_WIDTH = 32,
+	parameter ADDR_WIDTH =32
 )
 (
 	input clk,
 	input rst,
 	input en,
-	input [ADDR_WITDH-1:0]instr,
-	input [ADDR_WITDH-1:0]pc,
-	input [ADDR_WITDH-1:0]pcn,
+	input [ADDR_WIDTH-1:0]instr,
+	input [ADDR_WIDTH-1:0]pc,
+	input [ADDR_WIDTH-1:0]pcn,
 	input [4:0]rdw,
 	input wew,
-	input [DATA_WITDH-1:0]wdw,
+	input [DATA_WIDTH-1:0]wdw,
 
 	output [4:0]rs1,
 	output [4:0]rs2,
@@ -21,14 +21,14 @@ module de#(
 	output alu_src_1_ctr,// 1'b0 rs1 1'b1 pc
 	output alu_src_2_ctr,// 1'b0 rs2 1'b1 imm 
 	output [3:0]alu_ctr,
-	output jalx
+	output jalx,
 	output [2:0]op,
 	output reg_we,
 	output mem_we,
 	output [ADDR_WIDTH-1:0]pcnd,
-	output [ADDR_WIDTH-1:0]pcd
-	output [DATA_WITDH-1:0]rd1,
-	output [DATA_WITDH-1:0]rd2,
+	output [ADDR_WIDTH-1:0]pcd,
+	output [DATA_WIDTH-1:0]rd1,
+	output [DATA_WIDTH-1:0]rd2,
 	output [1:0]wb_ctr,
 	output rs1_need,
 	output rs2_need

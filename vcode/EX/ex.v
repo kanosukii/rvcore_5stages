@@ -1,12 +1,12 @@
 module ex#(
-	parameter DATA_WITDH = 32,
-	parameter ADDR_WITDH =32
+	parameter DATA_WIDTH = 32,
+	parameter ADDR_WIDTH =32
 )
 (
 	input clk, 
 	input rst, 
 	input reg_we,
-	input [DATA_WITDH-1:0]imm,
+	input [DATA_WIDTH-1:0]imm,
 	input jalx,
 	input [3:0]branch,
 	input alu_src_1_ctr,
@@ -15,10 +15,10 @@ module ex#(
 	input [2:0]op,
 	input mem_we,
 	input [4:0]rd,
-	input [ADDR_WITDH-1:0]pcnd,
-	input [ADDR_WITDH-1:0]pcd,
-	input [DATA_WITDH-1:0]rd1,
-	input [DATA_WITDH-1:0]rd2,
+	input [ADDR_WIDTH-1:0]pcnd,
+	input [ADDR_WIDTH-1:0]pcd,
+	input [DATA_WIDTH-1:0]rd1,
+	input [DATA_WIDTH-1:0]rd2,
 	input [4:0]rs1,
 	input [4:0]rs2,
 	input [1:0]wb_ctr,
@@ -33,20 +33,20 @@ module ex#(
 	output [2:0]ope,
 	output mem_wee,
 	output [4:0]rde,
-	output [ADDR_WITDH-1:0]pcne,
+	output [ADDR_WIDTH-1:0]pcne,
 	output taken,
- 	output [DATA_WITDH-1:0]alu_result,
-	output [DATA_WITDH-1:0]rd2_ture,
-	output [1:0]wb_ctre
+ 	output [DATA_WIDTH-1:0]alu_result,
+	output [DATA_WIDTH-1:0]rd2_ture,
+	output [1:0]wb_ctre,
 	output [4:0]rs1e,
 	output [4:0]rs2e
 
 );
-	wire [DATA_WITDH-1:0]imme,pce,rd1e,rd2e;
+	wire [DATA_WIDTH-1:0]imme,pce,rd1e,rd2e;
 	wire jalxe,alu_src_1_ctre,alu_src_2_ctre;
 	wire [3:0]branche,alu_ctre;
 
-	ex_dff(
+	ex_dff u_ex_dff(
 	.clk(clk),
 	.rst(rst),
 	.reg_we(reg_we),
@@ -86,9 +86,10 @@ module ex#(
 	.wb_ctre(wb_ctre)
 );
 
-	wire [DATA_WITDH-1:0]rd1_ture,rd2_ture,alu_src_1,alu_src_2;
+	wire [DATA_WIDTH-1:0]rd1_ture,alu_src_1,alu_src_2;
+
 	alu_src u_alu_src(
-	.alu_resm(alu_resm),
+	.alu_resm(alu_resultm),
 	.result(result),
 	.rd1(rd1e),
 	.rd2(rd2e),
@@ -96,8 +97,8 @@ module ex#(
 	.imm(imme),
 	.rd1_ctr(rd1_ctr),
 	.rd2_ctr(rd2_ctr),
-	.alu_src_1_ctr(alu_src_1e_ctr),
-	.alu_src_2_ctr(alu_src_2e_ctr),
+	.alu_src_1_ctr(alu_src_1_ctre),
+	.alu_src_2_ctr(alu_src_2_ctre),
 	.rd1_ture(rd1_ture),
 	.rd2_ture(rd2_ture),
 	.alu_src_1(alu_src_1),
