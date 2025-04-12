@@ -33,8 +33,10 @@ module de#(
 	output rs1_need,
 	output rs2_need
 );
+	wire [ADDR_WIDTH-1:0]instrd;
+
 	decode u_decode(
-	.instr(instr),
+	.instr(instrd),
 	.rs1(rs1),
 	.rs2(rs2),
 	.rd(rd),
@@ -58,8 +60,10 @@ module de#(
 	.en(en),
 	.pcn(pcn),
 	.pc(pc),
+	.instr(instr),
 	.pcnd(pcnd),
-	.pcd(pcd)
+	.pcd(pcd),
+	.instrd(instrd)
 );
 
 	register u_register(

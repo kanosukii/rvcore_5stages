@@ -73,8 +73,8 @@ end
 	always @(*)begin
 	alu_ctr_temp = 4'b0000;
 //	if(typeU || typeJ || ) alu_ctr_temp = 4'b0000;
-	if(typeR || typeI) 	  alu_ctr_temp[2:0] = func3;
-	if(typeR || (typeI && func3_101)) alu_ctr_temp[3] = instr[30];
+	if(typeR || op_0010011) 	  alu_ctr_temp[2:0] = func3;
+	if(typeR || (op_0010011 && func3_101)) alu_ctr_temp[3] = instr[30];
 end
 	assign alu_ctr = alu_ctr_temp;
 
@@ -85,7 +85,7 @@ end
 	assign mem_we = typeS;
 
 //wb_ctr
-	assign wb_ctr = (typeJ | op_1100111) ? 2'b01 : (typeS ? 2'b11 : 2'b00);
+	assign wb_ctr = (typeJ | op_1100111) ? 2'b01 : (op_0000011 ? 2'b11 : 2'b00);
 	assign rs1_need = !(typeU || typeJ);
 	assign rs2_need = typeR || typeS || typeB; 
 endmodule

@@ -42,8 +42,6 @@ module top#(
 
 	initial begin
 	$readmemh("./tcode/temp/test.hex",u_instr_mem.mem,0);
-	
-	$display("mem[0] = %h", u_instr_mem.mem[0]);
 end
 	
 	initial begin
