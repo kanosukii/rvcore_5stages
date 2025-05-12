@@ -35,7 +35,7 @@ int main(int argc, char** argv){
 	top->clk = 0x0;
 	top->rst = 0x1;
 
-	while(contextp->time() < 140){	//time = 140   clock = 70
+	while(!contextp->gotFinish()){
 
 	contextp->timeInc(1);//1 timeprecision period passes...
 	

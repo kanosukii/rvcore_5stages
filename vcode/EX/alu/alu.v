@@ -36,7 +36,7 @@ module alu(
 );
 	wire less_sign,less_unsign;
 	assign less_sign = overflow ^ sum[31];
-	assign less_unsign = carry;
+	assign less_unsign = !carry;
 //shift unit
 	wire [1:0]shift_type;
 	wire [31:0]shift;

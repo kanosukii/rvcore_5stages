@@ -92,6 +92,6 @@ label6:
     j label_end
 
 label_end:
-    nop                # 空操作 (停止执行)
-    j label_end        # 死循环
+		ebreak
+
 

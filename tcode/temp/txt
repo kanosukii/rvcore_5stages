@@ -97,5 +97,4 @@ Disassembly of section .text:
   fc:	0040006f          	j	100 <label_end>
 
 00000100 <label_end>:
- 100:	00000013          	nop
- 104:	ffdff06f          	j	100 <label_end>
+ 100:	00100073          	ebreak
